@@ -10,7 +10,7 @@ export default class LambdaDemo extends Component {
     e.preventDefault();
 
     this.setState({loading: true});
-    fetch('/.netlify/functions/hello')
+    fetch('/.netlify/functions/createSession')
       .then(response => response.json())
       .then(json => this.setState({loading: false, msg: json.msg}));
   }
@@ -20,7 +20,7 @@ export default class LambdaDemo extends Component {
 
     return <p>
       <button onClick={this.handleClick}>{loading ? 'Loading...' : 'Call Lambda'}</button><br/>
-      <span>{msg}</span>
+      <span>{JSON.stringify(msg)}</span>
     </p>
   }
 }
