@@ -7,7 +7,7 @@ class Landing extends React.Component {
     super(props);
     this.state = {
       // not sure how to handle imgs (use a link?)
-      instruments : [{name: guitar, img: ''}];
+      instruments : [{name: guitar, img: ''}]; // example of an instrument 
       image: ''
     }
    this.pickInstrument = this.pickInstrument.bind(this);
