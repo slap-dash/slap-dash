@@ -28,9 +28,14 @@ class TokBoxDemo extends Component {
   }
  
   render() {
+    const WIDTH = 800;
+    const HEIGHT = 600;
     return (
       <div>
-        <OTPublisher session={this.sessionHelper.session} />
+        <OTPublisher
+          session={this.sessionHelper.session}
+          properties={{width: WIDTH, height: HEIGHT}}
+        />
  
         {this.state.streams.map(stream => {
           return (
@@ -38,6 +43,7 @@ class TokBoxDemo extends Component {
               key={stream.id}
               session={this.sessionHelper.session}
               stream={stream}
+              properties={{width: WIDTH, height: HEIGHT}}
             />
           );
         })}
