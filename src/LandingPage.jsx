@@ -7,24 +7,28 @@ class Landing extends React.Component {
     super(props);
     this.state = {
       // not sure how to handle imgs (use a link?)
-      instruments : [{name: guitar, img: ''}]; // example of an instrument 
+      instruments : [{name: guitar, img: ''}], // example of an instrument 
       image: ''
     }
    this.pickInstrument = this.pickInstrument.bind(this);
   }
 
-  pickInstrument(instrument) {
-     if (this.state.instruments.includes(instrument) === false) {
+  pickInstrument(instrumentName) {
+     if (this.state.instruments.some(instrument => instrument['name'] === instrumentName) === false) {
         this.state.push({name: instrument, img: ''});
       }
       for (var i = 0; i < this.state.instruments; i++) {
-        if (this.state.instruments[i] === instrument) {
+        if (this.state.instruments[i] === instrumentName) {
           this.image = this.state.instruments[i].image;
         }
       } 
-      if (input === 'other') {
-        this.image = 'other';
+      if (instrumentName === 'other') {
+        this.image = ''; // just leaving this here for now
       }
+  }
+
+  joinRoom(room) {
+    // nothing here yet and in fact will probably want to pass this down as props from App
   }
 
 
@@ -45,7 +49,7 @@ class Landing extends React.Component {
         >
           <Grid.Column style={{ maxWidth: 450 }}>
             <Header as='h1' textAlign='center'>
-                <div className="login-logo-name" > InstaLawa </div>
+                <div className="login-logo-name" > Jam Roulette </div>
            </Header>
             <Form size='large'>
               <Segment stacked>
@@ -61,13 +65,13 @@ class Landing extends React.Component {
             </Form>
             <Message>
               <Modal size="tiny" trigger={<Button>Join a Room</Button>} closeIcon>
-              <Modal.Header>Welcome to <span className="modal-logo"> InstaLawa!</span></Modal.Header>
+              <Modal.Header>Welcome to <span className="modal-logo"> Jam Roulette</span></Modal.Header>
               <Modal.Content>
                 <Form>
                 <Segment stacked>
                 <input placeholder='Select a room name' ref={i => {this.room = i }} />
               </Segment>
-                    <Modal size="mini" trigger={<Button type="submit" id="signUp" onClick={e => { this.props.signUp([this.newEmail, this.newUsername]) }}>Let's get started</Button>}>
+                    <Modal size="mini" trigger={<Button type="submit" id="signUp" onClick={e => { this.joinRoom(this.room) }}>Let's get started</Button>}>
                        <Grid textAlign="center">
                        <Button color="green" style={{width: '100%'}}><Icon name="checkmark" />You're all set!</Button>
                        </Grid>
