@@ -1,49 +1,25 @@
 import React, { Component } from 'react';
 
-import TokBoxDemo from './TokBoxDemo.js'
+import TokBoxDemo from './TokBoxDemo.js';
 
 import logo from './logo.svg';
 import './App.css';
-
-class LambdaDemo extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {loading: false, msg: null};
-  }
-
-  handleClick = (e) => {
-    e.preventDefault();
-
-    this.setState({loading: true});
-    fetch('/.netlify/functions/createSession')
-      .then(response => response.json())
-      .then(json => this.setState({loading: false, msg: json.msg}));
-  }
-
-  render() {
-    const {loading, msg} = this.state;
-
-    return <p>
-      <button onClick={this.handleClick}>{loading ? 'Loading...' : 'Call Lambda'}</button><br/>
-      <span>{msg}</span>
-    </p>
-  }
-}
+import styled from 'styled-components';
 
 class App extends Component {
   render() {
+    const App = styled.div`
+      text-align: center;
+      background-color: #222;
+      height: 100vh;
+      width: 100vw;
+      color: white;
+    `;
+
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-        <LambdaDemo/>
-        <TokBoxDemo/>
-      </div>
+      <App>
+        <TokBoxDemo />
+      </App>
     );
   }
 }
