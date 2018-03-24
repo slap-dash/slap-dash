@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+
+import TokBoxDemo from './TokBoxDemo.js'
+
 import logo from './logo.svg';
 import './App.css';
 
@@ -39,6 +42,7 @@ class App extends Component {
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
         <LambdaDemo/>
+        <TokBoxDemo/>
       </div>
     );
   }
