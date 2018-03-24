@@ -48,8 +48,8 @@ class TokBoxDemo extends Component {
     `;
 
     return (
-      <GridWrapper columns={GRID_COLUMNS}>
-        <Grid columns={GRID_COLUMNS} rows={GRID_ROWS}>
+      <div>
+        <div>
           <OTPublisher
             session={this.sessionHelper.session}
             properties={{
@@ -57,9 +57,9 @@ class TokBoxDemo extends Component {
               height: `${Math.round(100 / GRID_ROWS)}vh`,
             }}
           />
-        </Grid>
+        </div>
         {this.state.streams.map(stream => (
-          <Grid columns={GRID_COLUMNS} rows={GRID_ROWS}>
+          <div>
             <OTSubscriber
               key={stream.id}
               session={this.sessionHelper.session}
@@ -69,9 +69,9 @@ class TokBoxDemo extends Component {
                 height: `${Math.round(100 / GRID_ROWS)}vh`,
               }}
             />
-          </Grid>
+          </div>
         ))}
-      </GridWrapper>
+      </div>
     );
   }
 }
