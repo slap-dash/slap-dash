@@ -7,7 +7,6 @@ import {
   OTSubscriber,
   createSession,
 } from 'opentok-react';
-import styled from 'styled-components';
 
 class TokBoxDemo extends Component {
   constructor(props) {
@@ -35,21 +34,23 @@ class TokBoxDemo extends Component {
     const GRID_COLUMNS = 3;
     const GRID_ROWS = 3;
 
-    const GridWrapper = styled.div`
-      display: grid;
-      grid-template-columns: repeat(${props => props.columns}, 1fr);
-    `;
+    const gridWrapperCSS = {
+      display: 'grid',
+      gridTemplateColumns: `repeat(${props => props.columns}, 1fr)`,
+    };
 
-    const Grid = styled.div`
-      width: ${props => Math.round(100 / props.columns)}vw;
-      height: ${props => Math.round(100 / props.rows)}vh;
-      background-color: #ccc;
-      color: #000;
-    `;
+    const gridCSS = {
+      width: `${props => Math.round(100 / props.columns)}vw`,
+      height: `${props => Math.round(100 / props.rows)}vh`,
+      color: '#000',
+    };
 
     return (
-      <div>
-        <div>
+      <div
+        className="grid-wrapper"
+        style={gridWrapperCSS}
+      >
+        <div className="grid" style={gridCSS}>
           <OTPublisher
             session={this.sessionHelper.session}
             properties={{
@@ -59,7 +60,7 @@ class TokBoxDemo extends Component {
           />
         </div>
         {this.state.streams.map(stream => (
-          <div>
+          <div className="grid" style={gridCSS}>
             <OTSubscriber
               key={stream.id}
               session={this.sessionHelper.session}
