@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 
 import TokBoxDemo from './TokBoxDemo.js'
+import Grid from './Grid.js'
 
 import logo from './logo.svg';
 import './App.css';
+
 
 class LambdaDemo extends Component {
   constructor(props) {
@@ -43,6 +45,7 @@ class App extends Component {
         </p>
         <LambdaDemo/>
         <TokBoxDemo/>
+        <Grid />
       </div>
     );
   }
