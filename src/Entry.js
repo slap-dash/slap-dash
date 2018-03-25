@@ -33,7 +33,7 @@ class Entry extends Component {
 }
 
     return (
-      <div style={logInSelection}>
+      <div className="wrapper">
         <div className="jam" onClick={()=>{this.props.update('Jam')}}><p>Jam</p></div>
         <div className="watch" onClick={()=>{this.props.update('Watch')}}><p>Watch</p></div>
       </div>
