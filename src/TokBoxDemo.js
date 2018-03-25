@@ -57,7 +57,7 @@ class TokBoxDemo extends Component {
             session={this.sessionHelper.session}
             properties={{
               width: `${Math.round(100 / GRID_COLUMNS)}vw`,
-              height: `${Math.round(100 / GRID_ROWS)}vh`,
+              height: `100vh`,
             }}
           />
         </div>
@@ -69,7 +69,7 @@ class TokBoxDemo extends Component {
               stream={stream}
               properties={{
                 width: `${Math.round(100 / GRID_COLUMNS)}vw`,
-                height: `${Math.round(100 / GRID_ROWS)}vh`,
+                height: `100vh`
               }}
             />
           </div>
