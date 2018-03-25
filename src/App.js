@@ -4,9 +4,10 @@ import TokBoxDemo from './TokBoxDemo.js';
 import Landing from './LandingPage.jsx';
 import Entry from './Entry.js';
 import Jams from './JamList.js';
+import Temp from './Temp.js';
 
 import logo from './logo.svg';
-import './App.css';
+import './App.css'
 
 class App extends Component {
   constructor(props) {
@@ -71,7 +72,7 @@ class App extends Component {
       <div className="app" style={appCSS}>
         {console.log(this.state.rooms)}
         {this.state.choice === null && <Entry update={this.updateChoice} />}
-        {this.state.choice === 'Watch' && <Jams rooms={this.state.rooms} />}
+        {this.state.choice === 'Watch' && <Temp room={this.state.rooms[0]} people={this.setPeople} live={this.setLive} />}
         {this.state.choice === 'Jam' && <TokBoxDemo room={this.state.rooms[0]} people={this.setPeople} live={this.setLive} />}
       </div>
     );
