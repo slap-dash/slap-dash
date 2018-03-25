@@ -36,12 +36,12 @@ class TokBoxDemo extends Component {
 
     const gridWrapperCSS = {
       display: 'grid',
-      gridTemplateColumns: `repeat(${props => props.columns}, 1fr)`,
+      gridTemplateColumns: `repeat(${GRID_COLUMNS}, 1fr)`,
     };
 
     const gridCSS = {
-      width: `${props => Math.round(100 / props.columns)}vw`,
-      height: `${props => Math.round(100 / props.rows)}vh`,
+      width: `${Math.round(100 / GRID_COLUMNS)}vw`,
+      height: `${Math.round(100 / GRID_ROWS)}vh`,
       color: '#000',
     };
 

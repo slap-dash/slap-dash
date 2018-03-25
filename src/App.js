@@ -1,7 +1,12 @@
 import React, { Component } from 'react';
 
+<<<<<<< HEAD
 import TokBoxDemo from './TokBoxDemo.js'
 import Grid from './Grid.js'
+=======
+import TokBoxDemo from './TokBoxDemo.js';
+import Landing from './LandingPage.jsx';
+>>>>>>> ec65b97eed42e035370a0bd0a46472eacbf68a86
 
 import logo from './logo.svg';
 import './App.css';
