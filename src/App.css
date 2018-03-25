@@ -11,12 +11,63 @@ body {
 
 #wrapper {
   display: flex;
+<<<<<<< HEAD
+  width: 100%;
+  height: 100%;
+=======
   width: 100vw;
   height: 100vh;
+>>>>>>> f6c4d994738fdca6140d98a7a428f81cbcdb4723
   align-items: center;
 }
 
 .jam {
+<<<<<<< HEAD
+  height: 50vh;
+  width: 100%;
+  background-color: #FFAB00;
+  color: white;
+  display:flex;
+  align-items: center;
+  cursor:pointer;
+}
+
+.watch {
+    height: 50vh;
+  width: 100%;
+  background-color: #3B202D;
+  color: white;
+  display:flex;
+  align-items: center;
+  cursor:pointer;
+}
+
+.watch:hover {
+  font-size: 20vw;
+}
+
+.jam:hover {
+  font-size: 20vw;
+}
+
+p {
+  margin: auto;
+  color: white;
+  text-shadow: 0.4vw 0.4vw 0.2vw rgba(0, 0, 0, 0.5);
+}
+
+.jam:active {
+  text-shadow: 0 0 0;
+  font-size: 19vw;
+}
+
+.watch:active {
+  text-shadow: 0 0 0;
+  font-size: 19vw;
+}
+
+/*   jam mode   
+=======
   position: absolute;
   height: 100%;
   width: 100%;
@@ -41,6 +92,7 @@ span {
 
 
 /*   jam mode   */
+>>>>>>> f6c4d994738fdca6140d98a7a428f81cbcdb4723
 
 #wrapper {
   overflow: hidden;
@@ -96,4 +148,10 @@ iframe {
 
 video {
   mix-blend-mode: screen;
+<<<<<<< HEAD
 }
+
+*/
+=======
+}
+>>>>>>> f6c4d994738fdca6140d98a7a428f81cbcdb4723

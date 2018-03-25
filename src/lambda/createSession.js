@@ -14,8 +14,8 @@ export function createSession(event, context, callback) {
 
   const inputPayload = JSON.parse(event.body);
 
-  // eslint-disable-next-line
-  opentok.createSession((err, session) => {
+  // eslint-disable-next-line // add us to media server and avoid relayed lag
+  opentok.createSession({mediaMode:"routed"}, (err, session) => {
     if (err) return callback(err);
 
     const publisherToken = opentok.generateToken(session.sessionId, { role: 'publisher' });
