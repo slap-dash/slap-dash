@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* forces the sizing to ignore margin and padding */
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  background-color: white;
+  background-color: black;
+  object-fit: cover;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.stream {
+  padding: 1px;
+  height: 25%;
+  width: 25%;
+}
+
+.stream:hover {
+  
+}
