@@ -26,10 +26,10 @@ This project is licensed under the MIT License
 
 ## Acknowledgments
 
-* Ben Dunphy for being an absolute star host *WOOO!*
-
 * Tokbox for their sharp, lean and fast real-time communication, without it this project wouldn't exist
 
-* Netlify for making our back end so easy it felt unreal!
+* Netlify for making our back end so easy it felt unreal
 
 * All the remaining API providers, the amazing sponsors and especially Github for hosting the Reactathon2018 that housed this project
+
+* Ben Dunphy for being an absolute star host *WOOO!*
