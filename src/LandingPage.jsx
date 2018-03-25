@@ -1,5 +1,4 @@
 import React from 'react';
-import { Button, Form, Grid, Header, Image, List, Modal, Icon, Message, Segment } from 'semantic-ui-react'
 
 
 class Landing extends React.Component {
@@ -35,56 +34,26 @@ class Landing extends React.Component {
 
 
   render() {
-    <style>{`
-        body > div,
-        body > div > div,
-        body > div > div > div.login-form {
-          height: 100%;
-        }
-    `}</style>
+  
     return (
-      <div className='login-form'>
-        <Grid
-          textAlign='center'
-          style={{ height: '100%' }}
-          verticalAlign='middle'
-        >
-          <Grid.Column style={{ maxWidth: 450 }}>
-            <Header as='h1' textAlign='center'>
-                <div className="login-logo-name" > Jam Roulette </div>
-           </Header>
-            <Form size='large'>
-              <Segment stacked>
+      <div>
+        <div class="grid" >
+          <div class="segment">
+            <h1 class="header" textAlign='center'>Jam Roulette</h1>
                 <input
                   placeholder='Pick Your Instrument'
                   ref={(input) => { this.pickInstrument(input); }}
-                  className="login-input"
                 />
 
-
-              </Segment>
-            </Form>
-            <Message>
-              <Modal size="tiny" trigger={<Button>Join a Room</Button>} closeIcon>
-              <Modal.Header>Welcome to <span className="modal-logo"> Jam Roulette</span></Modal.Header>
-              <Modal.Content>
-                <Form>
-                <Segment stacked>
+           <button>Join a Room</button>
+              <span>Welcome to <span className="Roulette-logo"> Jam Roulette</span></span>
+                <div class="segment">
                 <input placeholder='Select a room name' ref={i => {this.room = i }} />
-              </Segment>
-                    <Modal size="mini" trigger={<Button type="submit" id="signUp" onClick={e => { this.joinRoom(this.room) }}>Let's get started</Button>}>
-                       <Grid textAlign="center">
-                       <Button color="green" style={{width: '100%'}}><Icon name="checkmark" />You're all set!</Button>
-                       </Grid>
-                    </Modal>
-              </Form>
-              </Modal.Content>
-            </Modal>
-            </Message>
-          </Grid.Column>
-        </Grid>
-      </div>
-
+              </div>
+                    <button class="room" onClick={e => { this.joinRoom(this.room) }}>Let's get started</button>
+            </div>
+          </div>
+        </div>
 
     );
   }
