@@ -5,7 +5,7 @@ class Landing extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      instruments: [], // example of an instrument/ default [0] index
+      instruments: [], // example of each obj in instruments array = {name: 'guitar', image: ''}
       image: '' // this can be a background or side image of some sort that could depend on which image the musician chooses
     }
    this.pickInstrument = this.pickInstrument.bind(this);
