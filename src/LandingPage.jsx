@@ -15,7 +15,7 @@ class Landing extends React.Component {
      if (this.state.instruments.some(instrument => instrument['name'] === instrumentName) === false) {
        var obj = {name: instrumentName, image: ''}
         this.setState({
-          instruments: [...instruments, obj]
+          instruments: [...this.state.instruments, obj]
       });
     }
       for (var i = 0; i < this.state.instruments; i++) {
