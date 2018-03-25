@@ -21,5 +21,5 @@ body {
 }
 
 .stream:hover {
-  
+  cursor: pointer;
 }
