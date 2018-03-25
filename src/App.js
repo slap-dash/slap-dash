@@ -37,7 +37,7 @@ class App extends Component {
       <div className="app" style={appCSS}>
         {this.state.choice === null && <Entry update={this.updateChoice} />}
         {this.state.choice === 'Watch' && <Jams rooms={this.state.liveRooms} />}
-        {this.state.choice === 'Jam' && <Jams rooms={this.state.bandRooms} />}
+        {this.state.choice === 'Jam' && <TokBoxDemo />}
       </div>
     );
   }
