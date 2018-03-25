@@ -12,7 +12,11 @@ class JamList extends Component {
 
     return (
       <div style={jams}>
-        {this.props.rooms.map(room => <Jam />)}
+        {this.props.rooms.map( (room) => {
+          if (room.live  === true && room.people > 1) {
+            return <Jam room= {room} />
+          }
+        })}
       </div>
     );
   }
