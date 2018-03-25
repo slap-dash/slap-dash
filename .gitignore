@@ -4,5 +4,3 @@ build/
 .DS_Store
 yarn-error.log
 .env
-semantic/
-semantic.json
