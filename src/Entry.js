@@ -4,13 +4,13 @@ class Entry extends Component {
   render() {
     const logInSelection = {
       display: 'flex',
-      justifyContent: 'center',
+      justifyContent: 'center'
     };
     const choice = {
       cursor: 'pointer',
       width: '150px',
       height: '40px',
-      margin: '50vh 15%',
+      margin: '50vh 15%'
     }
 
     const jam = {
@@ -19,7 +19,7 @@ class Entry extends Component {
       width: '100%',
       backgroundColor: '#FFAB00',
       color: 'white',
-      textAlign: 'left',
+      textAlign: 'left'
 }
 
     const watch = {

@@ -8,7 +8,7 @@ class Jam extends Component {
       height: '300px',
       background: 'grey',
       margin: '5px',
-      position: 'relative',
+      position: 'relative'
     };
 
     return (

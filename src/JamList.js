@@ -7,7 +7,7 @@ class JamList extends Component {
     const jams = {
       listStyleType: 'none',
       display: 'flex',
-      flexWrap: 'wrap',
+      flexWrap: 'wrap'
     };
 
     return (
