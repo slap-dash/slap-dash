@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import TokBoxDemo from './TokBoxDemo.js';
+import Landing from './LandingPage.jsx';
 
 import logo from './logo.svg';
 import './App.css';
