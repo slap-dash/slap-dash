@@ -7,6 +7,8 @@ export function createSession(event, context, callback) {
   const SECRET = process.env.TOKBOX_SECRET;
   const opentok = new OpenTok(API_KEY, SECRET);
 
+  const inputPayload = JSON.parse(event.body);
+
   // eslint-disable-next-line
   opentok.createSession((err, session) => {
     if (err) return callback(err);
@@ -14,11 +16,9 @@ export function createSession(event, context, callback) {
     const publisherToken = opentok.generateToken(session.sessionId, { role: 'publisher' });
     const subscriberToken = opentok.generateToken(session.sessionId, { role: 'subscriber' });
 
-    // save the sessionId
-    // db.save('session', session.sessionId, done);
     const response = {
-      roomName: 'hello_world',
-      sessionId: session.sessionId,
+      room_name: inputPayload.room_name,
+      session_id: session.sessionId,
       token: {
         publisher: publisherToken,
         subscriber: subscriberToken,
