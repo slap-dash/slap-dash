@@ -1,0 +1,22 @@
+.grid {
+    text-align: center;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.segment {
+    max-width: 450;
+
+}
+
+.header {
+    text-align: center;
+}
+
+.Roulette-logo {
+    height: 100%;
+}
+
+.room {
+    color: blue;
+}
