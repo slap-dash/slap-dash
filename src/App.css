@@ -1,3 +1,99 @@
 * {
-  font-size: 10px;
+	  font-size: 10vh;
+	  color: white;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+  height: 100vh;
+  width: 100vw;
+}
+
+#wrapper {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  align-items: center;
+}
+
+.jam {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: #FFAB00;
+  color: white;
+  clip: rect(0 50vw 100vh 0);
+}
+
+.watch {
+  position: absolute;
+  left: 50vw;
+  height: 100%;
+  width: 100%;
+  background-color: #3B202D;
+  color: white;
+}
+
+span {
+  color:black;
+}
+
+
+
+/*   jam mode   */
+
+#wrapper {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.view {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background-blend-mode: multiply;
+}
+
+.one {
+  z-index: 5;
+  left: -40vw;
+  background-color: #0D3D22;
+  clip-path: polygon(0 0, 55% 0, 50% 100%, 0 100%);
+}
+
+.two {
+  z-index: 4;
+  left: -25vw;
+  background-color: #00151F;
+  clip-path: polygon(0 0, 65% 0, 55% 100%, 0 100%);
+}
+
+.three {
+  z-index: 3;
+  left: -5vw;
+  background-color: #3B202D;
+  clip-path: polygon(0 0, 60% 0, 55% 100%, 0 100%);
+}
+
+.four {
+  z-index: 2;
+  left: 15vw;
+  background-color: #FFAB00;
+   clip-path: polygon(0 0, 65% 0, 55% 100%, 0 100%);
+}
+
+.five {
+  z-index: 1;
+  left: 40vw;
+  background-color: #6E0A08;
+}
+
+iframe {
+  mix-blend-mode: screen;
+}
+
+video {
+  mix-blend-mode: screen;
 }
