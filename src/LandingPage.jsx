@@ -15,15 +15,17 @@ class Landing extends React.Component {
 
   pickInstrument(instrumentName) {
      if (this.state.instruments.some(instrument => instrument['name'] === instrumentName) === false) {
-        this.state.push({name: instrument, img: ''});
-      }
+        this.setState({
+          instruments: [...instruments, {name: instrumentName, image: ''}]
+      });
+    }
       for (var i = 0; i < this.state.instruments; i++) {
         if (this.state.instruments[i] === instrumentName) {
-          this.image = this.state.instruments[i].image;
+          this.setState({image: this.state.instruments[i].image});
         }
       } 
       if (instrumentName === 'other') {
-        this.image = ''; // just leaving this here for now
+        this.setState({image: ''}); // just leaving this here for now
       }
   }
 
@@ -60,7 +62,6 @@ class Landing extends React.Component {
                 />
 
 
-                <Button class="ui secondary button" onClick={(e) => {this.logIn(e.target.value)}} fluid size='large'>Login</Button>
               </Segment>
             </Form>
             <Message>
