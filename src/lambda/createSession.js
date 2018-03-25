@@ -1,6 +1,11 @@
 require('dotenv').config();
 const OpenTok = require('opentok');
 
+// google location API
+// var geocoder = new google.maps.Geocoder;
+
+
+
 // eslint-disable-next-line
 export function createSession(event, context, callback) {
   const API_KEY = process.env.TOKBOX_API_KEY;
@@ -31,3 +36,30 @@ export function createSession(event, context, callback) {
     });
   });
 }
+
+// here is an example on how to handle location in a server. not sure how to handle it in lambda
+// exports.handler = function(event, context, callback) {
+//   if (navigator.geolocation) {
+
+//     // call this function to get the location
+
+//     navigator.geolocation.getCurrentPosition(function (position) {
+
+//       // the results return as a lat lng, 
+//       //which we will put them into a variable to use in Google's Geocoder 
+
+//       var pos = {
+//         lat: position.coords.latitude,
+//         lng: position.coords.longitude
+//       };
+
+//       // Now we can get the location info(city, state, zip) with Google's Geocoder
+
+//       geocoder.geocode({ 'location': pos }, function (results, status) {
+//         if (status === 'OK') {
+//           console.log(results);
+//         }
+//       });
+//     });
+//   }
+// }
