@@ -23,29 +23,17 @@ class LambdaDemo extends Component {
   }
 
   render() {
-    const {loading, msg} = this.state;
-
-    return <p>
-      <button onClick={this.handleClick}>{loading ? 'Loading...' : 'Call Lambda'}</button><br/>
-      <span>{msg}</span>
-    </p>
-  }
-}
+    const appCSS = {
+      backgroundColor: '#222',
+      height: '100vh',
+      width: '100vw',
+    };
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-        <LambdaDemo/>
-        <TokBoxDemo/>
-        <Grid />
+      <div className="app" style={appCSS}>
+        <TokBoxDemo />
       </div>
     );
   }

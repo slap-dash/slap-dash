@@ -8,7 +8,8 @@
     "opentok-react": "^0.7.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
-    "react-scripts": "1.1.1"
+    "react-scripts": "1.1.1",
+    "uuid": "^3.2.1"
   },
   "scripts": {
     "start": "react-scripts start",

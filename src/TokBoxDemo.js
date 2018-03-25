@@ -30,15 +30,37 @@ class TokBoxDemo extends Component {
   render() {
     const WIDTH = 800;
     const HEIGHT = 600;
+
+    const GRID_COLUMNS = 3;
+    const GRID_ROWS = 3;
+
+    const gridWrapperCSS = {
+      display: 'grid',
+      gridTemplateColumns: `repeat(${props => props.columns}, 1fr)`,
+    };
+
+    const gridCSS = {
+      width: `${props => Math.round(100 / props.columns)}vw`,
+      height: `${props => Math.round(100 / props.rows)}vh`,
+      color: '#000',
+    };
+
     return (
-      <div>
-        <OTPublisher
-          session={this.sessionHelper.session}
-          properties={{width: WIDTH, height: HEIGHT}}
-        />
- 
-        {this.state.streams.map(stream => {
-          return (
+      <div
+        className="grid-wrapper"
+        style={gridWrapperCSS}
+      >
+        <div className="grid" style={gridCSS}>
+          <OTPublisher
+            session={this.sessionHelper.session}
+            properties={{
+              width: `${Math.round(100 / GRID_COLUMNS)}vw`,
+              height: `${Math.round(100 / GRID_ROWS)}vh`,
+            }}
+          />
+        </div>
+        {this.state.streams.map(stream => (
+          <div className="grid" style={gridCSS}>
             <OTSubscriber
               key={stream.id}
               session={this.sessionHelper.session}
