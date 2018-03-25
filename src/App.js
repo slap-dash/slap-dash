@@ -4,22 +4,19 @@ import TokBoxDemo from './TokBoxDemo.js';
 
 import logo from './logo.svg';
 import './App.css';
-import styled from 'styled-components';
 
 class App extends Component {
   render() {
-    const App = styled.div`
-      text-align: center;
-      background-color: #222;
-      height: 100vh;
-      width: 100vw;
-      color: white;
-    `;
+    const appCSS = {
+      backgroundColor: '#222',
+      height: '100vh',
+      width: '100vw',
+    };
 
     return (
-      <App>
+      <div className="app" style={appCSS}>
         <TokBoxDemo />
-      </App>
+      </div>
     );
   }
 }
