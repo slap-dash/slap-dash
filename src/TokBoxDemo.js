@@ -53,6 +53,7 @@ class TokBoxDemo extends Component {
         style={gridWrapperCSS}
       >
         <div className="grid" style={gridCSS}>
+        {this.props.publisher && 
           <OTPublisher
             session={this.sessionHelper.session}
             properties={{
@@ -60,6 +61,7 @@ class TokBoxDemo extends Component {
               height: `100vh`,
             }}
           />
+          }
         </div>
         {this.state.streams.map(stream => (
           <div className="grid" style={gridCSS}>

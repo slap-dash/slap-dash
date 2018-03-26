@@ -73,7 +73,7 @@ class App extends Component {
         {console.log(this.state.rooms)}
         {this.state.choice === null && <Entry update={this.updateChoice} />}
         {this.state.choice === 'Watch' && <Temp room={this.state.rooms[0]} people={this.setPeople} live={this.setLive} />}
-        {this.state.choice === 'Jam' && <TokBoxDemo room={this.state.rooms[0]} people={this.setPeople} live={this.setLive} />}
+        {this.state.choice === 'Jam' && <TokBoxDemo room={this.state.rooms[0]} publisher={true} people={this.setPeople} live={this.setLive} />}
       </div>
     );
   }
