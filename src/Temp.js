@@ -63,7 +63,7 @@ class App extends Component {
           <img style={stream} className="stream" src="https://drive.google.com/uc?id=1y4qOxyOJ9kDMPkPFr31-S7qBuG0uyf3Y" alt="stream" />
         </div>
         }
-        {this.state.clicked && <Band room={this.props.room} people={this.props.people} live={this.props.live} />}
+        {this.state.clicked && <Band publisher={false} room={this.props.room} people={this.props.people} live={this.props.live} />}
       </div>
     );
   }
