@@ -1,5 +1,5 @@
-# JamRoulette
-Reactathon Hackathon JamRoulette
+# slap-dash
+The impromptu band maker
 
 ## Built With
 
@@ -15,7 +15,7 @@ Reactathon Hackathon JamRoulette
 
 * **Jake Shasteen** - *Software Engineer* - [www.github.com/jake-shasteen](https://github.com/jake-shasteen)
 
-* **Nuno Neves** - *UX Engineer* - [www.github.com/storycoding](https://github.com/storycoding)
+* **Nuno Neves** - *Software Engineer* - [www.github.com/storycoding](https://github.com/storycoding)
 
 * **SeungJu Lee** - *Software Engineer* - [www.github.com/seungjulee](https://github.com/seungjulee)
 
@@ -26,10 +26,5 @@ This project is licensed under the MIT License
 
 ## Acknowledgments
 
-* Tokbox for their sharp, lean and fast real-time communication, without it this project wouldn't exist
-
-* Netlify for making our back end so easy it felt unreal
-
-* All the remaining API providers, the amazing sponsors and especially Github for hosting the Reactathon2018 that housed this project
-
-* Ben Dunphy for being an absolute star host *WOOO!*
+* Tokbox for their sharp, lean and fast real-time communication
+* Netlify for making our back end a dream
