@@ -9,7 +9,11 @@ The impromptu band maker
 
 [netlify](https://www.netlify.com/) - The all-in-one framework that combines global deployment, continuous integration, and HTTPS
 
-## Authors
+## Active Developers
+* **Hayden Marx** - *Software Engineer* - [www.github.com/Haydenmarx](https://github.com/Haydenmarx)
+* **Nuno Neves** - *Software Engineer* - [www.github.com/storycoding](https://github.com/storycoding)
+
+## Initial Team
 
 * **Hayden Marx** - *Software Engineer* - [www.github.com/Haydenmarx](https://github.com/Haydenmarx)
 
